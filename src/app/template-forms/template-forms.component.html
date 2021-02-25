@@ -1,0 +1,41 @@
+<div class="row main-container">
+  <div class="col">
+    <h1>Template-driven Form</h1>
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm" novalidate autocomplete="off">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" tabindex="1" class="form-control" name="firstName"
+          id="firstName" ngModel/>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" tabindex="2" class="form-control" name="lastName"
+          id="lastName" ngModel/>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" tabindex="3" class="form-control" name="email"
+          id="email" ngModel required #email="ngModel" />
+        <div class="error" *ngIf="email.errors && (email.dirty || email.touched)">
+          <p *ngIf="email.errors.required">
+            Please enter email address
+          </p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" tabindex="4" class="form-control" name="password"
+          id="password" ngModel required #password="ngModel" />
+        <div class="error" *ngIf="password.errors && (password.dirty || password.touched)">
+          <p *ngIf="password.errors.required">
+            Please enter password
+          </p>
+        </div>
+      </div>
+
+      <div class="form-group button-container">
+        <button type="submit" class="btn btn-primary">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
