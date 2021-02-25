@@ -14,8 +14,7 @@
       </div>
       <div class="form-group">
         <label for="email">Email</label>
-        <input [ngClass]="{'is-invalid': form.get('email').invalid && form.get('email').touched}" type="email" tabindex="3" class="form-control" name="email"
-          id="email" formControlName="email" />
+        <input type="email" tabindex="3" class="form-control" name="email" id="email" formControlName="email" />
 
         <div class="error" *ngIf="form.get('email').errors && (form.get('email').dirty || form.get('email').touched)">
           <p *ngIf="form.get('email').errors.required">
@@ -27,16 +26,9 @@
         </div>
       </div>
       <div class="form-group">
-        <label for="password">Password</label>
-        <input [ngClass]="{'is-invalid': form.get('password').invalid && form.get('password').touched}" type="password" tabindex="4" class="form-control" name="password"
-          id="password" formControlName="password" />
-        <div class="error" *ngIf="form.get('password').errors && (form.get('password').dirty || form.get('password').touched)">
-          <p *ngIf="form.get('password').errors.required">
-            Please enter password
-          </p>
-        </div>
+        <input type="checkbox" name="rememberMe" id="rememberMe" formControlName="rememberMe" #rememberMe />
+        <label for="rememberMe">Remember Me</label>
       </div>
-
       <div class="form-group button-container">
         <button type="submit" class="btn btn-primary">Save</button>
       </div>

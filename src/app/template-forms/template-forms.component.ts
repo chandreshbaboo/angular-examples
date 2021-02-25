@@ -16,6 +16,8 @@ export class TemplateFormsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    // any child will not be available in ngOnInIt lifecycle event
+    console.log('this.signupForm=', this.signupForm);
   }
 
   public onSubmit(form: NgForm) {
