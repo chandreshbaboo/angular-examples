@@ -1,0 +1,11 @@
+.main-container {
+  width: 80%;
+  margin: 0 auto;
+  background: #e3e3e3;
+  padding: 20px;
+  height: calc(100vh - 80px);
+}
+.error p {
+  margin: 0;
+  color: red;
+}

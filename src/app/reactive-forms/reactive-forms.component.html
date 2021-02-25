@@ -1,0 +1,45 @@
+<div class="row main-container">
+  <div class="col">
+    <h1>Reactive Form</h1>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate autocomplete="off">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" tabindex="1" class="form-control" name="firstName"
+          id="firstName" formControlName="firstName" />
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" tabindex="2" class="form-control" name="lastName"
+          id="lastName" formControlName="lastName" />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input [ngClass]="{'is-invalid': form.get('email').invalid && form.get('email').touched}" type="email" tabindex="3" class="form-control" name="email"
+          id="email" formControlName="email" />
+
+        <div class="error" *ngIf="form.get('email').errors && (form.get('email').dirty || form.get('email').touched)">
+          <p *ngIf="form.get('email').errors.required">
+            Please enter email address
+          </p>
+          <p *ngIf="form.get('email').errors?.pattern">
+            Please enter valid email address
+          </p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input [ngClass]="{'is-invalid': form.get('password').invalid && form.get('password').touched}" type="password" tabindex="4" class="form-control" name="password"
+          id="password" formControlName="password" />
+        <div class="error" *ngIf="form.get('password').errors && (form.get('password').dirty || form.get('password').touched)">
+          <p *ngIf="form.get('password').errors.required">
+            Please enter password
+          </p>
+        </div>
+      </div>
+
+      <div class="form-group button-container">
+        <button type="submit" class="btn btn-primary">Save</button>
+      </div>
+    </form>
+  </div>
+</div>

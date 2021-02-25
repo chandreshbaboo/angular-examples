@@ -1,3 +1,4 @@
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 import { TemplateFormsComponent } from './template-forms/template-forms.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: 'template-forms',
     component: TemplateFormsComponent
+  },
+  {
+    path: 'reactive-forms',
+    component: ReactiveFormsComponent
   }
 ]
 

@@ -1,1 +1,19 @@
-<router-outlet></router-outlet>
+<div class="row">
+  <div class="col main-container">
+    <div class="row">
+      <div class="col-2">
+        <ul class="navBar">
+          <li>
+            <a routerLink="template-forms">Template Driven Forms</a>
+          </li>
+          <li>
+            <a routerLink="reactive-forms">Reactive Forms</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-10 content-section">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>
