@@ -1,11 +1,14 @@
 .main-container {
-  width: 600px;
+  width: 100%;
   margin: 0 auto;
-  background: #e1e1e1;
-  padding: 20px;
   height: calc(100vh - 80px);
 }
-
+.refs {
+  background: cornsilk;
+}
+.content {
+  background: #e1e1e1;
+}
 .main-container .form-group {
   display: flex;
   flex-direction: column;
