@@ -16,3 +16,6 @@
 .content-section {
   flex: 0 1 auto;
 }
+.btn-theme {
+  background: gray;
+}

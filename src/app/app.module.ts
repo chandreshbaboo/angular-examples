@@ -13,6 +13,8 @@ import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
 import { FaInputComponent } from './fa-input/fa-input.component';
 import { InputRefDirective } from './input-ref.directive';
 import { FaIconDirective } from './fa-icon.directive';
+import { GreetComponent } from './greet/greet.component';
+import { ThemeableButtonComponent } from './themeable-button/themeable-button.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { FaIconDirective } from './fa-icon.directive';
     CustomInputComponent,
     FaInputComponent,
     InputRefDirective,
-    FaIconDirective
+    FaIconDirective,
+    GreetComponent,
+    ThemeableButtonComponent
   ],
   imports: [
     BrowserModule,
