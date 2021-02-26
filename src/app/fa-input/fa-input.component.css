@@ -1,0 +1,12 @@
+:host {
+  border: 5px solid grey;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+:host(.focus) {
+  border: 5px solid blue;
+}

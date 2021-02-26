@@ -1,3 +1,4 @@
+import { CustomInputComponent } from './custom-input/custom-input.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 import { TemplateFormsComponent } from './template-forms/template-forms.component';
 import { NgModule } from '@angular/core';
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'reactive-forms',
     component: ReactiveFormsComponent
+  },
+  {
+    path: 'custom-input',
+    component: CustomInputComponent
   }
 ]
 
