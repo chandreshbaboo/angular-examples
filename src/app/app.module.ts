@@ -11,6 +11,8 @@ import { CustomInputComponent } from './custom-input/custom-input.component';
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
 import { FaInputComponent } from './fa-input/fa-input.component';
+import { InputRefDirective } from './input-ref.directive';
+import { FaIconDirective } from './fa-icon.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { FaInputComponent } from './fa-input/fa-input.component';
     TemplateFormsComponent,
     ReactiveFormsComponent,
     CustomInputComponent,
-    FaInputComponent
+    FaInputComponent,
+    InputRefDirective,
+    FaIconDirective
   ],
   imports: [
     BrowserModule,

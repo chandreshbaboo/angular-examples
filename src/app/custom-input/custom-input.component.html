@@ -3,12 +3,23 @@
     <h3>Content Projection</h3>
     <div class="form-group mt-3">
       <label>Email</label>
-      <app-fa-input icon="envelope" placeholder="Enter email" (value)="onNewValue($event)"></app-fa-input>
+      <app-fa-input>
+        <fa-icon [icon]="['fas', 'envelope']" appFaIcon></fa-icon>
+        <input type="email" placeholder="Enter Email" appInputRef />
+      </app-fa-input>
     </div>
 
     <div class="form-group">
       <label>Password</label>
-      <app-fa-input icon="lock" placeholder="Enter password" (value)="onNewValue($event)"></app-fa-input>
+      <app-fa-input>
+        <fa-icon [icon]="['fas', 'lock']" appFaIcon></fa-icon>
+        <input type="password" placeholder="Enter password" appInputRef />
+      </app-fa-input>
     </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <p><a href="https://blog.angular-university.io/angular-ng-content/" target="_new">Click</a> here to see the same documentation for more reference</p>
   </div>
 </div>

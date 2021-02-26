@@ -1,3 +1,2 @@
-<fa-icon [icon]="['fas', icon]"></fa-icon>
-<input (focus)="inputFocus= true" [placeholder]="placeholder" (blur)="inputFocus= false"
-  (keyup)="value.emit(input.value)" #input>
+<ng-content select="fa-icon"></ng-content>
+<ng-content></ng-content>

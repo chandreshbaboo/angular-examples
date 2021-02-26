@@ -1,4 +1,5 @@
-import { Component, Input, Output, HostBinding, EventEmitter } from "@angular/core";
+import { InputRefDirective } from './../input-ref.directive';
+import { Component, Input, Output, HostBinding, EventEmitter, ContentChild } from "@angular/core";
 
 @Component({
   selector: 'app-fa-input',
@@ -7,13 +8,10 @@ import { Component, Input, Output, HostBinding, EventEmitter } from "@angular/co
 })
 export class FaInputComponent {
   @Input() icon: string;
-  @Input() placeholder: string;
-  @Output() value = new EventEmitter<string>();
-  inputFocus = false;
+  @ContentChild(InputRefDirective) private inputRef: InputRefDirective;
 
   @HostBinding('class.focus')
   get focus() {
-    console.log(this.inputFocus);
-    return this.inputFocus;
+    return this.inputRef ? this.inputRef.focus : false;
   }
 }
