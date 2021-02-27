@@ -15,6 +15,7 @@ import { InputRefDirective } from './input-ref.directive';
 import { FaIconDirective } from './fa-icon.directive';
 import { GreetComponent } from './greet/greet.component';
 import { ThemeableButtonComponent } from './themeable-button/themeable-button.component';
+import { MessageComponent } from './message/message.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ThemeableButtonComponent } from './themeable-button/themeable-button.co
     InputRefDirective,
     FaIconDirective,
     GreetComponent,
-    ThemeableButtonComponent
+    ThemeableButtonComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,
